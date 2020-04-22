@@ -5,7 +5,7 @@ The `Array.prototype.slice()` method returns a subset of the array, so you can t
 
 ```JS
 const removeElementAt = (arr, i, mutate = false) =>
-  i
+  (i || i === 0)
     ? mutate
       ? arr.splice(i, 1) && arr
       : [...arr.slice(0, i), ...arr.slice(i + 1)]
